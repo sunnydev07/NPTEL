@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL Certificate - Sunny Kumar Dev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000000;
+            padding: 20px;
+        }
+
+        .certificate-container {
+            max-width: 100%;
+            max-height: 95vh;
+            position: relative;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .certificate-container::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c, #9b59b6, #3498db, #2ecc71, #f39c12);
+            background-size: 300% 300%;
+            animation: borderGlow 4s ease infinite;
+            border-radius: 12px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.7;
+        }
+
+        .certificate-img {
+            display: block;
+            max-width: 100%;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 
+                0 25px 80px rgba(0, 0, 0, 0.5),
+                0 10px 30px rgba(0, 0, 0, 0.3);
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .certificate-container::before {
+                filter: blur(4px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <img class="certificate-img" src="certificate.png" alt="NPTEL Certificate - Sunny Kumar Dev">
+    </div>
+</body>
+</html>
